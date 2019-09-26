@@ -18,7 +18,6 @@ Nothing.
 Role Variables
 --------------
 
-Nothing.
 | Key | Default Value | Type | Comment |
 | ------------- | ------------- | ------------- | ------------- |
 | `selinux_policy` | `targeted` | String | If you use Enforcing or Permissive. |
