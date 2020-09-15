@@ -3,6 +3,16 @@
   yum:
     name: libselinux-python
     state: present
+  when:
+    - ansible_distribution == "CentOS" and ansible_distribution_major_version == "7"
+    - ansible_distribution == "Amazon"
+
+- name: Install python3-libselinux
+  yum:
+    name: python3-libselinux
+    state: present
+  when:
+    - ansible_distribution == "CentOS" and ansible_distribution_major_version == "8"
 
 - name: Enable SELinux
   selinux:
